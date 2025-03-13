@@ -6,9 +6,9 @@ import logging
 from datetime import datetime
 import streamlit as st
 
-load_dotenv()
+# load_dotenv()
 
-openai_api_key = os.getenv("OPENAI_API_KEY")
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 client = openai.Client(api_key=openai_api_key)
 
 prompt = (
